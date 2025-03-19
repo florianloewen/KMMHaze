@@ -47,17 +47,17 @@ fun App() {
                             scrolledContainerColor = Color.Transparent,
                         ),
                     modifier =
-                        Modifier.hazeEffect(
+                        Modifier.fillMaxWidth().hazeEffect(
                             state = hazeState,
                             style =
                                 HazeMaterials.ultraThin(containerColor = Color.Gray),
                         ),
                     title = { Text("LargeTopAppBar") },
                 )
-            }) { innerPadding ->
+            }) {
             LazyColumn(
                 modifier =
-                    Modifier.fillMaxSize().hazeSource(state = hazeState).padding(innerPadding)
+                    Modifier.fillMaxSize().hazeSource(state = hazeState)
             ) {
                 repeat(100) {
                     item {
